@@ -1,4 +1,4 @@
-const Student = require('../models/studentmodel');
+const Student = require('../models/StudentModel');
 const Course = require('../models/Corsesmodel');
 const { getUniversityByCode } = require('../config/universityConfig');
 
