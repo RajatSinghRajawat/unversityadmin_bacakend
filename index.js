@@ -20,7 +20,18 @@ connectDB();
 
 app.use(express.json());
 app.use(express.static("public/Uploads"))
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    exposedHeaders: ['Content-Type', 'Authorization'],
+    // preflightContinue: false,
+    // optionsSuccessStatus: 200,
+    // maxAge: 86400,
+    credentials: true,
+}));
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/auth', authRoutes);
