@@ -1,4 +1,4 @@
-const Student = require("../models/StudentModel");
+const Student = require('../models/students');
 const Payment = require("../models/Accounts");
 const { getUniversityByCode } = require('../config/universityConfig');
 
