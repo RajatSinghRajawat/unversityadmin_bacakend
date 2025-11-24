@@ -1,6 +1,7 @@
-const Student = require('../models/StudentModel');
+
 const Course = require('../models/Corsesmodel');
 const { getUniversityByCode } = require('../config/universityConfig');
+const Student = require('../models/StudentModel');
 
 // Create Student
 const createStudent = async (req, res) => {
