@@ -39,4 +39,4 @@ const paymentSchema = new mongoose.Schema({
   timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }
 });
 
-module.exports = mongoose.models.Payment || mongoose.model('Payment', paymentSchema);
+module.exports =  mongoose.model('Payment', paymentSchema);

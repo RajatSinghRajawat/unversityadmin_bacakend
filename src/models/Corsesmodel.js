@@ -100,4 +100,4 @@ const courseSchema = new mongoose.Schema({
 courseSchema.index({ courseCode: 1, universityCode: 1 });
 courseSchema.index({ department: 1, universityCode: 1 });
 
-module.exports = mongoose.models.Course || mongoose.model('Course', courseSchema);
+module.exports =  mongoose.model('Course', courseSchema);

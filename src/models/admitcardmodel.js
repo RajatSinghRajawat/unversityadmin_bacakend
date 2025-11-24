@@ -74,4 +74,4 @@ const admitcardSchema = new mongoose.Schema({
   timestamps: true
 });
 
-module.exports = mongoose.models.Admitcard || mongoose.model('Admitcard', admitcardSchema);
+module.exports =  mongoose.model('Admitcard', admitcardSchema);
