@@ -1,5 +1,5 @@
 const Admitcard = require('../models/admitcardmodel');
-const Student = require('../models/StudentModel');
+const Student = require('../models/students');
 const Course = require('../models/Corsesmodel');
 const { getUniversityByCode } = require('../config/universityConfig');
 

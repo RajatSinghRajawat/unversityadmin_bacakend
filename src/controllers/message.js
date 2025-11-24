@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Message = require('../models/message');
-const Student = require('../models/StudentModel');
+const Student = require('../models/students');
 const { getUniversityByCode } = require('../config/universityConfig');
 
 // Create a new message
@@ -150,7 +150,7 @@ const getStudentMessages = async (req, res) => {
         // If email is provided, find the student first
         let studentId = student_id;
         if (email && !student_id) {
-            const Student = require('../models/StudentModel');
+            const Student = require('../models/students');
             const student = await Student.findOne({ email: email, universityCode: universityCode });
             if (student) {
                 studentId = student._id;

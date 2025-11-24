@@ -1,5 +1,5 @@
 const Attendance = require('../models/attendence');
-const Student = require('../models/StudentModel');
+const Student = require('../models/students');
 const { getUniversityByCode } = require('../config/universityConfig');
 
 // Create Attendance Record
