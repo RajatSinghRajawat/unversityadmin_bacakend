@@ -17,13 +17,7 @@ dotenv.config();
 
 const PORT = process.env.PORT || 4001;
 connectDB();
-app.use(cors({
-  origin: [
-    'http://93.127.166.30:5001',       // agar domain se open karoge
-    'http://localhost:5001',          // dev mode (optional)
-  ],
-  credentials: true,
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.static("public/Uploads"))
 
