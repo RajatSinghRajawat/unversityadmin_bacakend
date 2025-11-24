@@ -1,7 +1,7 @@
 
 const Course = require('../models/Corsesmodel');
 const { getUniversityByCode } = require('../config/universityConfig');
-const Student = require('../models/StudentModel');
+const Student = require('../models/students');
 
 // Create Student
 const createStudent = async (req, res) => {
