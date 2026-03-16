@@ -84,6 +84,7 @@ const createStudent = async (req, res) => {
 
 // Get All Students
 const getAllStudents = async (req, res) => {
+    console.log('Get all students with query:', req.query);
     try {
         const { universityCode } = req.query;
         let filter = { status: 'active'};
@@ -110,6 +111,7 @@ const getAllStudents = async (req, res) => {
             count: students.length,
             data: students
         });
+        console.log('Students retrieved:', students);
     } catch (error) {
         res.status(500).json({
             success: false,
@@ -354,6 +356,7 @@ const reactivateStudent = async (req, res) => {
 
 // Search Students
 const searchStudents = async (req, res) => {
+    console.log('Search query:', req.query);
     try {
         const { query, universityCode } = req.query;
         
@@ -544,6 +547,7 @@ const uploadStudentsFromExcel = async (req, res) => {
 
 // Get student by email OR password (flexible search)
 const getStudentByEmailOrPassword = async (req, res) => {
+    console.log('Search query:', req.query);
     try {
         const { email, password } = req.query;
         const universityCode = req.query.universityCode;
